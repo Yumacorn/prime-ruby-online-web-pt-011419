@@ -1,8 +1,8 @@
 require 'benchmark'
 
 iterations = 100_000
-Benchmark.bmbm('prime?') do |bm|
-  bm.report do
+Benchmark.bmbm do |bm|
+  bm.report('prime?') do
   iterations.times do
 def prime?(int)
   if int > 1
