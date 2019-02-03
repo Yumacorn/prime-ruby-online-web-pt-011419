@@ -1,7 +1,7 @@
 require 'benchmark'
 
 iterations = 100_000
-Benchmark.bm do |bm|
+Benchmark.bmbm do |bm|
   bm.report do
   iterations.times do
 def prime?(int)
