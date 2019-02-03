@@ -1,4 +1,4 @@
-require 'benchmark'
+# require 'benchmark'
 
 def prime?(int)
   if int > 1
@@ -11,11 +11,11 @@ def prime?(int)
   return false
 end
 
-iterations = 100_000
-Benchmark.bmbm do |bm|
-  bm.report('prime?') do
-    iterations.times do
-      prime?(1000)
-    end
-  end
-end
+# iterations = 100_000
+# Benchmark.bmbm do |bm|
+#   bm.report('prime?') do
+#     iterations.times do
+#       prime?(1000)
+#     end
+#   end
+# end
