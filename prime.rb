@@ -1,14 +1,5 @@
 require 'benchmark'
 
-iterations = 100_000
-Benchmark.bmbm do |bm|
-  bm.report('prime?') do
-    iterations.times do
-      prime?(10000)
-    end
-  end
-end
-
 def prime?(int)
   if int > 1
     if (2..int).to_a.any? {|num| int % num == 0 && int != num}
@@ -18,4 +9,13 @@ def prime?(int)
     end
   end
   return false
+end
+
+iterations = 100_000
+Benchmark.bmbm do |bm|
+  bm.report('prime?') do
+    iterations.times do
+      prime?(10000)
+    end
+  end
 end
