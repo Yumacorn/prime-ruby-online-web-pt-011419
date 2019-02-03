@@ -15,7 +15,7 @@ iterations = 100_000
 Benchmark.bmbm do |bm|
   bm.report('prime?') do
     iterations.times do
-      prime?(10000)
+      prime?(1000)
     end
   end
 end
